@@ -1,8 +1,848 @@
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>home</title>
-</head>
-<h1>welcome to demo </h1>	
-<a href="{% url 'page1' %}">page1</a>
+	  <title>home</title>
+	  <style>
+	  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding:20px;
+  background-color:rgb(242, 77, 46);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px #070707 solid;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  color: black;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+#brand a{
+  color: black;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: black;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+.ctn{
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid black;
+
+    
+}
+/* START MAIN BODY*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column {
+    float: left;
+    width: 70%;
+    padding: 20px;
+    height: 700px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    color: black;
+    background-color: rgb(242, 77, 46);
+  }
+  .column p{
+    padding-top: 100px;
+    color: white;
+  }
+  .column h3{
+    font-size: 85px;
+  }
+  .column h5{
+      padding-top: 30px;
+  }
+  .column h5 a{
+      background-color: white;
+      padding: 10px;
+      border-radius: 50px;
+      color: black;
+      width: fit-content;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  .column h6{
+      font-size: 20px;
+  }
+.column1{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 700px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: black;
+    background-color: rgb(242, 77, 46);
+}
+.column1 h3{
+    font-size: 75px;
+    padding-top: 100px;
+  }
+.column2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    color: white;
+    background-color: black;
+}
+.column2 h1{
+    font-size: 75px;
+}
+.column3{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    color: white;
+    background-color:black;
+}
+.column4{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    color: black;
+    background-color:#ffd1b9;
+    border-right:1px solid black ;
+    border-bottom: 1px solid black;
+}
+.column4 h1{
+    font-size: 75px;
+}
+.column4 p{
+    padding-top: 150px;
+}
+.column4 h5{
+    padding-top: 20px;
+}
+.column4 h5 a{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    text-decoration: none;
+}
+.column5{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    color: black;
+    background-color:#ffd1b9;
+    border-bottom: 1px solid black;
+}
+.column6{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 250px;
+    color: black;
+    background-color:#ffd1b9;
+    border-right:1px solid black ;
+    border-bottom: 1px solid black;
+}
+.column6 p{
+    padding-top: 50px;
+    font-size: 20px;
+}
+.column6 p a{
+    color: black;
+}
+.column7{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 250px;
+    color: black;
+    background-color:#ffd1b9;
+    border-bottom: 1px solid black;
+}
+.column7 p{
+    padding-top: 50px;
+    font-size: 20px;
+}
+.column8{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.column8 h1{
+    font-size: 75px;
+}
+.column9{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 500px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.column9 p{
+    padding-top: 20px;
+}
+.column9 img{
+    padding-top: 20px;
+}
+.column10{
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 250px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.column10 h1{
+    font-size: 34px;
+}
+.column10 p{
+    padding-top: 100px;
+}
+.column11{
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 250px;
+    border-bottom: 1px solid black;
+}
+.column11 h1{
+    font-size: 34px;
+}
+.column11 p{
+    padding-top: 100px;
+}
+.column12{
+    float: left;
+    width: 23%;
+    padding: 10px;
+    height: 250px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.column12 h1{
+    font-size: 34px;
+}
+.column12 p{
+    padding-top: 60px;
+}
+.column13{
+    float: left;
+    width: 23%;
+    padding: 10px;
+    height: 250px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.column13 h1{
+    font-size: 34px;
+}
+.column13 p{
+    padding-top: 60px;
+}
+.column14{
+    float: left;
+    width: 24%;
+    padding: 10px;
+    height: 250px;
+    border-bottom: 1px solid black;
+}
+.column14 h1{
+    font-size: 34px;
+}
+.column14 p{
+    padding-top: 100px;
+}
+.column15{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    color: white;
+    background-color: lightgreen;
+    border-bottom: 1px solid black;
+    /*background-image: url("background.png");*/
+}
+.column15 h1{
+    font-size: 55px;
+}
+.column15 h5{
+    padding-top: 50px;
+}
+.column15 h5 a{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    text-decoration: none;
+}
+.section4{
+	float:left;
+	width: 100%;
+	background-color: white;
+	color: black;
+	height: auto;
+	border-bottom: 2px solid white;
+}
+
+.section4 h1{
+	font-size: 34px;
+	padding: 30px;
+	background-color: black;
+	color: white;
+}
+
+
+/* FAQ DROP DOWN  */
+
+.questions-container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.question button{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border:none; outline: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.question button i{
+    transform: rotate(180deg);
+    transition: all 0.3s;
+	
+}
+
+.question p{
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.6;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-bottom: 1px solid white;
+}
+
+.question p.show{
+    max-height: 200px; opacity: 1;
+    padding: 20px;
+}
+
+.question button i.rotate{
+    transform: none;
+}
+footer{
+    float:left;
+    width: 100%;
+    height: 50px;
+    padding:10px;
+   }
+   footer td a{
+    color: black;
+    text-decoration:none
+   }
+
+
+
+@media only screen and (max-width: 1024px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+  .column {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    height: 600px;
+    border-bottom: 1px solid white;
+    color: black;
+    background-color: rgb(242, 77, 46);
+  }
+  .column p{
+    padding-top: 100px;
+    color: white;
+  }
+  .column h3{
+    font-size: 45px;
+  }
+  .column h6{
+      font-size: 10px !important;
+  }
+  .column h5{
+      padding-top: 30px;
+  }
+  .column h5 a{
+      background-color: white;
+      padding: 10px;
+      border-radius: 50px;
+      color: black;
+      width: auto;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  .column h6{
+      font-size: 20px;
+  }
+.column1{
+display: none;
+}
+.column2{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    color: white;
+    background-color: black;
+    border-bottom: 1px solid white;
+}
+.column2 h1{
+    font-size: 45px;
+}
+.column3{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    color: white;
+    background-color:black;
+}
+.column4{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 400px;
+    color: black;
+    background-color:#ffd1b9;
+    border-right: 0px !important ;
+    border-bottom: 1px solid black;
+}
+.column4 h1{
+    font-size: 45px;
+}
+.column4 p{
+    padding-top: 50px;
+}
+.column4 h5{
+    padding-top: 20px;
+}
+.column4 h5 a{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    text-decoration: none;
+}
+.column5{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    color: black;
+    background-color:#ffd1b9;
+    border-bottom: 1px solid black;
+}
+.column6{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    color: black;
+    background-color:#ffd1b9;
+    border-right: 0px !important;
+    border-bottom: 1px solid black;
+}
+.column6 p{
+    padding-top: 50px;
+    font-size: 20px;
+}
+.column6 p a{
+    color: black;
+}
+.column7{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 350px;
+    color: black;
+    background-color:#ffd1b9;
+    border-bottom: 1px solid black;
+}
+.column7 p{
+    padding-top: 50px;
+    font-size: 20px;
+}
+.column8{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.column8 h1{
+    font-size: 25px;
+}
+.column9{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 700px;
+    border-right: 0px !important;
+    border-bottom: 1px solid black;
+}
+.column9 p{
+    padding-top: 20px;
+}
+.column9 img{
+    padding-top: 20px;
+}
+.column10{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.column10 h1{
+    font-size: 20px;
+}
+.column10 p{
+    padding-top: 20px;
+}
+.column11{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    border-bottom: 1px solid black;
+}
+.column11 h1{
+    font-size: 20px;
+}
+.column11 p{
+    padding-top: 20px;
+}
+.column12{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 250px;
+    border-right: 0px !important;
+    border-bottom: 1px solid black;
+}
+.column12 h1{
+    font-size: 34px;
+}
+.column12 p{
+    padding-top: 30px;
+}
+.column13{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 250px;
+    border-right: 0px !important;
+    border-bottom: 1px solid black;
+}
+.column13 h1{
+    font-size: 34px;
+}
+.column13 p{
+    padding-top: 30px;
+}
+.column14{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-bottom: 1px solid black;
+}
+.column14 h1{
+    font-size: 34px;
+}
+.column14 p{
+    padding-top: 50px;
+}
+.column15{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    color: white;
+    background-color: lightgreen;
+    border-bottom: 1px solid black;
+    /*background-image: url("background.png");*/
+}
+.column15 h1{
+    font-size: 25px;
+}
+.column15 h5{
+    padding-top: 50px;
+}
+.column15 h5 a{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    text-decoration: none;
+}
+}
+	  </style>
+  </head>
+  <body>
+    <header class="header">
+      <div id="brand"><a href="/">CTDTECHS</a></div>
+      <nav>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Write</a></li>
+          <li><a href="#">Signup</a></li>
+          <li class="ctn"><a href="{% url 'register' %}">Start Writing</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div ><a href="{% url 'register' %}" style="padding: 10px;border-radius: 50px;border: 1px solid black;font-size:10px">Start Writing</a></div>
+      </div>
+    </header>
+    <!-- START MAIN BODY-->
+    <div class="row">
+        <div class="column">
+            <p>START A BLOG FOR FREE</p>
+            <h3>Publish, grow, and earn, all in one place.</h3>
+            <h6>If you have a story to tell, knowledge to share, or a perspective to offer — welcome home. Sign up for free so your writing can thrive in a network supported by millions of readers — not ads.</h6>
+            <h5><a href="#">Start Writing</a></h5>
+        </div>
+        <div class="column1">
+            <h3>column1</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+            <h1>Join a network of curious minds.</h1>
+        </div>
+        <div class="column3">
+            <h3>profiles</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column4">
+            <h1>Create your space.</h1>
+            <p>Tell your story your way — with different ways to write, style, and brand your work.</p>
+            <h5><a href="#">Start writing</a></h5>
+        </div>
+        <div class="column5">
+            <h3>image</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column6">
+            <h1>Start a blog.</h1>
+            <p>Create a blog for free to have a personalized home for your writing. Brand<a href="#">your space</a>  and share your writing with readers on any device.</p>
+        </div>
+        <div class="column7">
+            <h1>Start a publication.</h1>
+            <p>Collaborate with others or publish under a brand name. Use our story submission system and expressive customization options.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column8">
+            <h1>Find and grow your audience.</h1>
+            <p>With simple tools and features, you have the chance to connect with over 100 million curious readers.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column9">
+            <h1>Audience insights.</h1>
+            <p>Use data to learn what resonates with your readers so you can keep growing your audience.</p>
+            <img src="stats.png" alt="no picture" height="72%" width="100%" >
+        </div>
+        <div class="column10">
+            <h1>Social connectivity.</h1>
+            <p>Find people you’re already connected with on Twitter and easily share your stories across platforms.</p>
+        </div>
+        <div class="column11">
+            <h1>Powerful network.</h1>
+            <p>Readers can discover and follow you easily with tailored feeds and recommendations</p>
+        </div>
+        <div class="column12">
+            <h1>Email subscriptions.</h1>
+            <p>Reach readers by having your stories delivered straight to their inboxes.</p>
+        </div>
+        <div class="column13">
+            <h1>Interactive discussions.</h1>
+            <p>Build relationships with your readers through a threaded comments section.</p>
+        </div>
+        <div class="column14">
+            <h1>Custom design.</h1>
+            <p>Easily customize your page to stand out and build your brand.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column15">
+            <h1>Earn money from your writing.</h1>
+            <p>Writing has its rewards when you join the Partner Program. Learn how to get paid for the content you publish and the audiences you build.</p>
+            <h5><a href="#">Learn more</a></h5>
+        </div>
+    </div>
+    <section class="section4" >
+        <h1>More about publishing on Medium:</h1>
+        <section class="faq">
+          <div class="questions-container">
+              <div class="question">
+                  <button>
+                      <span>How do I start writing on Medium?</span>
+                      <i class="fas fa-chevron-up"></i>
+                  </button>
+                  <p>First, make a <a href="#">free account</a>. Then, to create a story, click on your profile picture in the top-right corner of the page, then “Write a Story.”</p>
+              </div>
+              <div class="question">
+                  <button>
+                      <span>How can I make money writing on Medium?</span>
+                      <i class="fas fa-chevron-up"></i>
+                  </button>
+                  <p>If you join the <a href="#">Medium Partner Program</a> , you can earn money based on how much time members spend reading your work and whenever you convert non-paying readers into members.</p>
+              </div>
+              <div class="question">
+                  <button>
+                      <span>Who writes on Medium?</span>
+                      <i class="fas fa-chevron-up"></i>
+                  </button>
+                  <p>Anyone can write on Medium. Whether you’ve never written before or are ready to create a full publication, it’s easy to <a href="#">get started</a>  and we allow you to focus more on big ideas and less on driving clicks. With the option to earn for your work, you can also be directly rewarded for the value you provide readers.</p>
+              </div>
+              <div class="question">
+                  <button>
+                      <span>Do I need to be in the Partner Program to write on Medium?</span>
+                      <i class="fas fa-chevron-up"></i>
+                  </button>
+                  <p>No. You can write on Medium even if you are not in the Partner Program. If you are in the Partner Program you can also choose which of the stories you publish are eligible for the Program. For more about the Partner Program, <a href="#">click here</a> .</p>
+              </div>
+              <div class="question">
+                <button>
+                    <span>What can I write about on Medium?</span>
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+                <p>Medium’s designed for short stories that make someone’s day better, manifestos that change the world, and everything in between. It’s used by everyone from professional journalists to data scientists to amateur cooks. Whatever the topic, Medium helps you find the right audience for what you have to say.</p>
+            </div>
+            <div class="question">
+              <button>
+                  <span>Who can read the work I publish on Medium?</span>
+                  <i class="fas fa-chevron-up"></i>
+              </button>
+              <p>Anyone on the internet can read your stories. Even if your story is being distributed in the Partner Program as a part of our <a href="#">metered paywall</a> , anyone can still read a limited number of articles for free each month. If you want to share an un-metered version of your story, you can use a <a href="#">Friend Link</a> .</p>
+          </div>
+          <div class="question">
+            <button>
+                <span>How can I grow my audience with Medium?</span>
+                <i class="fas fa-chevron-up"></i>
+            </button>
+            <p>Medium has a number of tools to connect you with over 100 million readers on the platform and beyond. Some ways you can build your audience are by starting a newsletter, submitting to publications, following the distribution standards, and sharing your stories on social media. We also encourage you to check out our blog, 3 Minute Read, for more helpful tips and tricks – like how to write a great headline and SEO tips to make your stories more discoverable.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach( button =>{
+            button.addEventListener('click',()=>{
+                const para = button.nextElementSibling;
+                const icon = button.children[1];
+
+                para.classList.toggle('show');
+                icon.classList.toggle('rotate');
+            })
+        } )
+    </script>
+    <footer>
+		<table>
+			<td style="padding: 10px;"><a href="#">About</a></td>
+			<td style="padding: 10px;"><a href="#">Privacy</a></td>
+			<td style="padding: 10px;"><a href="#">Terms</a></td>
+		</table>
+       </footer>
+  </body>
+</html>
+
