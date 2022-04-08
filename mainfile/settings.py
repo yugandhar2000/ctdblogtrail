@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l*pf9%75e(+eyan+t@=&ky-6+)3+ouj&j=m!*ogbdojww_*dlc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','ctdblogtrail.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','yugandharr.herokuapp.com']
 
 
 # Application definition
